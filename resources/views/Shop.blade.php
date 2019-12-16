@@ -35,7 +35,7 @@
     <![endif]-->
   </head>
   <body>
-      @include('includes.headers')
+      @include('includes.header')
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -64,7 +64,7 @@
                         </div>  
                         
                         <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Thêm vào giỏ hàng</a>
                         </div>                       
                     </div>
                 </div>
@@ -229,7 +229,7 @@
                         </div>  
                         
                         <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Thêm vào giỏ hàng</a>
                         </div>                       
                     </div>
                 </div>

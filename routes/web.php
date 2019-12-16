@@ -24,3 +24,5 @@ Route::get('/Detail','MyController@detail');
 Route::get('/Pay','MyController@pay'); 
 
 Route::get('/Cart','MyController@cart');
+
+Route::get('/login','MyController@login');

@@ -48,7 +48,7 @@
                         <p>Đăng ký nhận bản tin của chúng tôi và nhận các ưu đãi độc quyền mà bạn sẽ không tìm thấy bất cứ nơi nào khác trực tiếp đến hộp thư đến của bạn!</p>
                         <div class="newsletter-form">
                             <form action="#">
-                                <input type="email" placeholder="Nhaạp mail của bạn">
+                                <input type="email" placeholder="Nhập mail của bạn">
                                 <input type="submit" value="Theo dõi">
                             </form>
                         </div>

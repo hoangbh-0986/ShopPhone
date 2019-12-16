@@ -32,4 +32,8 @@ class MyController extends Controller
     {
     	return view ('Cart');
     }
+    public function login()
+    {
+    	return view ('login');
+    }
 }
