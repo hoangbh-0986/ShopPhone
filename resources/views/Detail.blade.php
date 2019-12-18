@@ -133,7 +133,7 @@
                             
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">Sony Smart TV - 2015</h2>
+                                    <h2 class="product-name">abc</h2>
                                     <div class="product-inner-price">
                                         <ins>$700.00</ins> <del>$100.00</del>
                                     </div>    

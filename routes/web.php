@@ -19,10 +19,11 @@ Route::get('/Index', 'MyController@index');
 
 Route::get('/Shop','MyController@shop');
 
-Route::get('/Detail','MyController@detail');
+Route::get('/Detail/','MyController@detail');
 
 Route::get('/Pay','MyController@pay'); 
 
 Route::get('/Cart','MyController@cart');
 
 Route::get('/login','MyController@login');
+

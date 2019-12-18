@@ -117,21 +117,23 @@ s
                     <div class="latest-product">
                         <h2 class="section-title">New product</h2>
                         <div class="product-carousel">
+                            @foreach($products as $item)
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/product-1.jpg" alt="">
+                                    <img src="img/{{$item->Url_Img}}" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
+                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
                                     </div>
                                 </div>
                                 
-                                <h2><a href="single-product.html">Samsung Galaxy s5- 2015</a></h2>
+                                <h2><a href="single-product.html">{{$item->Name}}</a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins>$700.00</ins> <del>$100.00</del>
+                                    <ins>{{$item->Price}}</ins> <del>{{$item->PriceReal}}</del>
                                 </div> 
                             </div>
+                            @endforeach
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-2.jpg" alt="">
@@ -212,7 +214,6 @@ s
             </div>
         </div>
     </div> <!-- End main content area -->
-    
     <div class="brands-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -220,6 +221,7 @@ s
                 <div class="col-md-12">
                     <div class="brand-wrapper">
                         <div class="brand-list">
+                       <!--   <img src="img/{{$item->Url_Img}}" alt=""> -->
                             <img src="img/brand1.png" alt="">
                             <img src="img/brand2.png" alt="">
                             <img src="img/brand3.png" alt="">
