@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="img/logo.png"></a></h1>
+                        <h1><a href="./"><img src="/img/logo.png"></a></h1>
                     </div>
                 </div>
                 
@@ -30,14 +30,12 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Trang Chủ</a></li>
-                        <li><a href="shop.html">Sản Phẩm</a></li>
-                        <!-- <li><a href="single-product.html">Single product</a></li>
-                        <li><a href="cart.html">Cart</a></li>-->
+                        <li class="active"><a href="Index">Trang Chủ</a></li>
+                        <li><a href="Shop">Sản Phẩm</a></li>
                         <li><a href="#">Liên Hệ</a></li>
                         <li><a href="#">Giới Thiệu</a></li>
                         <li><a href="checkout.html"><i class="fa fa-user"></i> Đăng nhập</a></li>
-                        <li><a href="#"> Đăng xuất</a></li>
+                        <li><a href=""> Đăng xuất</a></li>
                     </ul>
                 </div>  
             </div>

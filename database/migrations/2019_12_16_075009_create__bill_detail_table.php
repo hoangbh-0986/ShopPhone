@@ -13,12 +13,12 @@ class CreateBillDetailTable extends Migration
      */
     public function up()
     {
-        Schema::create('BillDetail', function (Blueprint $table) {
-           $table->bigInteger('Bill_id');
-           $table->bigInteger('Product_id');
-           $table->integer('Amount');
-           $table->bigInteger('Price');
-           $table->bigInteger('IntoMoney');
+        Schema::create('billdetails', function (Blueprint $table) {
+           $table->bigInteger('bill_id');
+           $table->bigInteger('product_id');
+           $table->integer('amount');
+           $table->bigInteger('price');
+           $table->bigInteger('into_money');
         });
     }
 

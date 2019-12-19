@@ -117,13 +117,13 @@ s
                     <div class="latest-product">
                         <h2 class="section-title">New product</h2>
                         <div class="product-carousel">
-                            @foreach($products as $item)
+                            @foreach(   $proc as $item)
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/{{$item->Url_Img}}" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
+                                        <a href="/Detail/{{$item->Product_id}}" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
                                     </div>
                                 </div>
                                 
@@ -134,7 +134,7 @@ s
                                 </div> 
                             </div>
                             @endforeach
-                            <div class="single-product">
+                        <!--     <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-2.jpg" alt="">
                                     <div class="product-hover">
@@ -143,7 +143,7 @@ s
                                     </div>
                                 </div>
                                 
-                                <h2>Nokia Lumia 1320</h2>
+                                <h2>Nokia</h2>
                                 <div class="product-carousel-price">
                                     <ins>$899.00</ins> <del>$999.00</del>
                                 </div> 
@@ -207,7 +207,7 @@ s
                                 <div class="product-carousel-price">
                                     <ins>$400.00</ins>
                                 </div>                            
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -221,15 +221,20 @@ s
                 <div class="col-md-12">
                     <div class="brand-wrapper">
                         <div class="brand-list">
-                       <!--   <img src="img/{{$item->Url_Img}}" alt=""> -->
-                            <img src="img/brand1.png" alt="">
+                     @foreach ($producer as $producer)
+                    <a href="/ProductByManufacturer/{{$producer->Producer_id}}"> 
+                        <img src="img/{{$producer->Url_Img}}" alt=""> 
+                    </a>
+
+                     @endforeach
+                           <!--  <img src="img/brand1.png" alt="">
                             <img src="img/brand2.png" alt="">
                             <img src="img/brand3.png" alt="">
                             <img src="img/brand4.png" alt="">
                             <img src="img/brand5.png" alt="">
                             <img src="img/brand6.png" alt="">
                             <img src="img/brand1.png" alt="">
-                            <img src="img/brand2.png" alt="">                            
+                            <img src="img/brand2.png" alt="">                   -->          
                         </div>
                     </div>
                 </div>

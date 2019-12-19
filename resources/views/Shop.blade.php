@@ -53,13 +53,13 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                @foreach($products as $item)
+                @foreach($product as $item)
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
                             <img src="img/{{$item->Url_Img}}" alt="">
                         </div>
-                        <h2><a href="">{{$item->Name}}</a></h2>
+                        <h2><a href="/Detail/{{$item->Product_id}}">{{$item->Name}}</a></h2>
                         <div class="product-carousel-price">
                             <ins>{{$item->Price}} vnd</ins> <del>{{$item->PriceReal}} vnd</del>
                         </div>  

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ProducerTableSeeder extends Seeder
+class ProductTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class ProducerTableSeeder extends Seeder
      */
     public function run()
     {
-        $count = 5;
-        factory(App\Producer::class, $count)->create();
+        $count = 15;
+        factory(App\Product::class, $count)->create();
     }
 }

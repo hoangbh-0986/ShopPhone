@@ -4,37 +4,36 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\producer;
-use App\product;
+use App\Producer;
+use App\Product;
 class MyController extends Controller
 {
     public function index()
      {
      
-         $products = DB::table('Products')->select('*');
-         $products = $products->get();
-    	return view ('Index',compact('products'));
-       //   $producer = App\Product::all();
-        // return view ('Index');
-        // $a = DB::table('Producers')->select('*');
-        // $a = $a->get();
-        // return view ('Index',compact('a'));
+      //    $products = DB::table('Products')->select('*');
+      //    $products = $products->get();
+    	 // return view ('Index',compact('products'));
+        $proc = Product::all();
+        $producer = Producer::all();
+        return view ('Index',compact('proc','producer'));
     }
 
 
     public function shop()
     {
-         $products = DB::table('Products')->select('*');
-         $products = $products->get();
-        return view ('Shop',compact('products'));
+        
+         $product = Product::all();
+         return view ('Shop',compact('product'));
+
     }
 
 
-    public function detail()
+    public function detail($id)
     {
-    	 // $news = Products::where('Product_id', '=', $id)->select('*')->first();
-      //   return view('Detail', compact('news'));
-        return view ('Detail');
+    	 $news = Product::where('Product_id', '=', $id)->select('*')->first();
+         return view('Detail', compact('news'));
+        //return view ('Detail');
     }
 
     public function pay()
@@ -50,5 +49,14 @@ class MyController extends Controller
     {
     	return view ('login');
     }
+
+    public function probyManu($ma)
+    {
+
+        $pro = Producer::findOrFail($ma)->Product;
+      //  $pro = Producer::where('Product_id','=',$ma)->select('*');
+
+        return view ('ProductByManufacturer',compact('pro'));
+    } 
 
 }

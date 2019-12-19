@@ -13,11 +13,11 @@ class CreateBillTable extends Migration
      */
     public function up()
     {
-        Schema::create('Bill', function (Blueprint $table) {
-            $table->bigIncrements('Bill_id');
-            $table->bigInteger('Customer_id');
-            $table->date('Date');
-            $table->bigInteger('TotalMoney');
+        Schema::create('bills', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('customer_id');
+            $table->date('date');
+            $table->bigInteger('total_money');
         });
     }
 

@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Producer extends Model
+class producer extends Model
 {
-     protected $primaryKey = 'Producer_id';
-    public  function product()
+	public $timestamps = false;
+     public function product()
     {
-    	return $this->hasMany('App\Product');
+        return $this->hasMany('App\product');
     }
 }

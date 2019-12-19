@@ -13,9 +13,10 @@ class CreateProducerTable extends Migration
      */
     public function up()
     {
-        Schema::create('Producer', function (Blueprint $table) {
-            $table->bigIncrements('Producer_id');
-            $table->string('Name');
+        Schema::create('producers', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->text('url_img');
         });
     }
 

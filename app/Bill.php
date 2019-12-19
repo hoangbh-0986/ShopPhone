@@ -4,17 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bill extends Model
+class bill extends Model
 {
-    protected $priamrykey = 'Customer_id';
-    
+		public $timestamps = false;
+     public function customer()
+    {
+        return $this->belongsTo('App\customer');
+    }
     public function billdetail()
     {
-    	return $this->hasMany('App\BillDetail');
-    }
-
-    public function customer()
-    {
-    	return $this->belongsTo('App\Customer');
+        return $this->hasMany('App\billdetail');
     }
 }

@@ -4,21 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class product extends Model
 {
-    protected $primarykey = 'Product_id';
 
-    public function producer()
+    public $timestamps = false;
+     public function producer()
     {
-    	return $this->belongsTo('App\Producer');
+        return $this->belongsTo('App\producer');
     }
-
-    public function producttype()
+     public function category()
     {
-    	return $this->belongTo('App\ProductType');
+        return $this->belongsTo('App\category');
     }
-    public function billdetail()
+     public function billdetail()
     {
-    	return $this->hasOne('App\BillDetail');
+        return $this->belongsTo('App\billdetail');
     }
 }
