@@ -17,10 +17,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     />
     <!-- /meta tags -->
     <!-- custom style sheet -->
-    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <link href="/css/login.css" rel="stylesheet" type="text/css" />
     <!-- /custom style sheet -->
     <!-- fontawesome css -->
-    <link href="css/fontawesome-all.css" rel="stylesheet" />
+    <link href="/css/fontawesome-all.css" rel="stylesheet" />
     <!-- /fontawesome css -->
     <!-- google fonts-->
     <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
@@ -40,14 +40,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <label>Tài khoản:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Tài khoản" required="required" />
+                    <input type="text" class="form-control" placeholder="Tài khoản" required="required" name="email" />
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Mật khẩu:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Mật khẩu" required="required" />
+                    <input type="password" class="form-control" placeholder="Mật khẩu" required="required" name="password" />
                 </div>
             </div>
     <!--         <div class="forgot">

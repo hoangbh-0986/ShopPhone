@@ -65,8 +65,18 @@
                     </div>
                     
                     <div class="single-sidebar">
-                        <h2 class="sidebar-title">Sản phẩm</h2>
-                        <div class="thubmnail-recent">
+                        <h2 class="sidebar-title">Sản phẩm cùng loại</h2>
+                     
+                         @foreach($news->category->product as $proc)
+                         <div class="thubmnail-recent">
+                            <img src="/img/{{$proc->url_img}}" class="recent-thumb" alt="">
+                            <h2><a href="/Detail/{{$proc->id}}">{{$proc->name}}</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>{{$proc->price}}</ins> <del>{{$proc->price_real}}</del>
+                            </div>                             
+                        </div>
+                        @endforeach
+                       <!--  <div class="thubmnail-recent">
                             <img src="/img/product-thumb-1.jpg" class="recent-thumb" alt="">
                             <h2><a href="">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
@@ -93,7 +103,7 @@
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
                             </div>                             
-                        </div>
+                        </div> -->
                     </div>
                     
                   <!--   <div class="single-sidebar">
@@ -113,14 +123,14 @@
                         <div class="product-breadcroumb">
                             <a href="">Trang chủ</a>
                             <a href="">Chi tiết</a>
-                            <a href="">Sony Smart TV - 2015</a>
+                            <a href="">{{$news->name}}</a>
                         </div>
                         
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="/img/product-2.jpg" alt="">
+                                        <img src="/img/{{$news->url_img}}" alt="">
                                     </div>
                                     
                                    <!--  <div class="product-gallery">
@@ -133,9 +143,9 @@
                             
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">{{$news->Name}}</h2>
+                                    <h2 class="product-name">{{$news->name}}</h2>
                                     <div class="product-inner-price">
-                                        <ins>{{$news->Price}}</ins> <del>{{$news->priceReal}}</del>
+                                        <ins>{{$news->price}}</ins> <del>{{$news->price_real}}</del>
                                     </div>    
                                     <form action="" class="cart">
                                         <div class="quantity">
@@ -189,24 +199,25 @@
                         
                         
                         <div class="related-products-wrapper">
-                            <h2 class="related-products-title">Sản phẩm liên quan </h2>
+                            <h2 class="related-products-title">Sản phẩm cùng nhà sản xuất </h2>
                             <div class="related-products-carousel">
+                                  @foreach($news->producer->product as $product)
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img src="/img/product-1.jpg" alt="">
+                                        <img src="/img/{{$product->url_img}}" alt="">
                                         <div class="product-hover">
-                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
+                                            <a href="/Detail/{{$product->id}}" class="view-details-link"><i class="fa fa-link"></i> chi tiết</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="">Sony Smart TV - 2015</a></h2>
-
+                                     <h2><a href="">{{$product->name}}</a></h2>
                                     <div class="product-carousel-price">
-                                        <ins>$700.00</ins> <del>$100.00</del>
+                                        <ins>{{$product->price}}</ins> <del>{{$product->price_real}}</del>
                                     </div> 
                                 </div>
-                                <div class="single-product">
+                                @endforeach
+                              <!--   <div class="single-product">
                                     <div class="product-f-image">
                                         <img src="/img/product-2.jpg" alt="">
                                         <div class="product-hover">
@@ -279,7 +290,7 @@
                                     <div class="product-carousel-price">
                                         <ins>$400.00</ins>
                                     </div>                            
-                                </div>                                    
+                                </div>        -->                             
                             </div>
                         </div>
                     </div>                    

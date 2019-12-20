@@ -31,9 +31,8 @@ class MyController extends Controller
 
     public function detail($id)
     {
-    	 $news = Product::where('Product_id', '=', $id)->select('*')->first();
+    	 $news = Product::findOrFail($id);
          return view('Detail', compact('news'));
-        //return view ('Detail');
     }
 
     public function pay()
@@ -45,10 +44,7 @@ class MyController extends Controller
     {
     	return view ('Cart');
     }
-    public function login()
-    {
-    	return view ('login');
-    }
+
 
     public function probyManu($ma)
     {

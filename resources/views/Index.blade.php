@@ -17,16 +17,15 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
     
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-s
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
   </head>
   <body>
    
@@ -36,16 +35,16 @@ s
             <div class="block-slider block-slider4">
                 <ul class="" id="bxslider-home4">
                     <li>
-                        <img src="img/h4-slide.png" alt="Slide">
+                        <img src="/img/h4-slide.png" alt="Slide">
                         <div class="caption-group">
                             <h2 class="caption title">
                                 iPhone <span class="primary">6 <strong>Plus</strong></span>
                             </h2>
                             <h4 class="caption subtitle">Dual SIM</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                            <a class="caption button-radius" href="/Shop/"><span class="icon"></span>Shop now</a>
                         </div>
                     </li>
-                    <li><img src="img/h4-slide2.png" alt="Slide">
+        <!--             <li><img src="/img/h4-slide2.png" alt="Slide">
                         <div class="caption-group">
                             <h2 class="caption title">
                                 by one, get one <span class="primary">50% <strong>off</strong></span>
@@ -53,8 +52,8 @@ s
                             <h4 class="caption subtitle">school supplies & backpacks.*</h4>
                             <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
                         </div>
-                    </li>
-                    <li><img src="img/h4-slide3.png" alt="Slide">
+                    </li> -->
+               <!--      <li><img src="/img/h4-slide3.png" alt="Slide">
                         <div class="caption-group">
                             <h2 class="caption title">
                                 Apple <span class="primary">Store <strong>Ipod</strong></span>
@@ -63,7 +62,7 @@ s
                             <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
                         </div>
                     </li>
-                    <li><img src="img/h4-slide4.png" alt="Slide">
+                    <li><img src="/img/h4-slide4.png" alt="Slide">
                         <div class="caption-group">
                           <h2 class="caption title">
                                 Apple <span class="primary">Store <strong>Ipod</strong></span>
@@ -71,7 +70,7 @@ s
                             <h4 class="caption subtitle">& Phone</h4>
                             <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- ./Slider -->
@@ -120,23 +119,23 @@ s
                             @foreach(   $proc as $item)
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/{{$item->Url_Img}}" alt="">
+                                    <img src="/img/{{$item->url_img}}" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
-                                        <a href="/Detail/{{$item->Product_id}}" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
+                                        <a href="/Detail/{{$item->id}}" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
                                     </div>
                                 </div>
                                 
-                                <h2><a href="single-product.html">{{$item->Name}}</a></h2>
+                                <h2><a href="single-product.html">{{$item->name}}</a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins>{{$item->Price}}</ins> <del>{{$item->PriceReal}}</del>
+                                    <ins>{{$item->price}}</ins> <del>{{$item->price_real}}</del>
                                 </div> 
                             </div>
                             @endforeach
                         <!--     <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/product-2.jpg" alt="">
+                                    <img src="/img/product-2.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -150,7 +149,7 @@ s
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt="">
+                                    <img src="/img/product-3.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -165,7 +164,7 @@ s
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/product-4.jpg" alt="">
+                                    <img src="/img/product-4.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -180,7 +179,7 @@ s
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/product-5.jpg" alt="">
+                                    <img src="/img/product-5.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -195,7 +194,7 @@ s
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/product-6.jpg" alt="">
+                                    <img src="/img/product-6.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -222,19 +221,19 @@ s
                     <div class="brand-wrapper">
                         <div class="brand-list">
                      @foreach ($producer as $producer)
-                    <a href="/ProductByManufacturer/{{$producer->Producer_id}}"> 
-                        <img src="img/{{$producer->Url_Img}}" alt=""> 
+                    <a href="/ProductByManufacturer/{{$producer->id}}"> 
+                        <img src="/img/{{$producer->url_img}}" alt=""> 
                     </a>
 
                      @endforeach
-                           <!--  <img src="img/brand1.png" alt="">
-                            <img src="img/brand2.png" alt="">
-                            <img src="img/brand3.png" alt="">
-                            <img src="img/brand4.png" alt="">
-                            <img src="img/brand5.png" alt="">
-                            <img src="img/brand6.png" alt="">
-                            <img src="img/brand1.png" alt="">
-                            <img src="img/brand2.png" alt="">                   -->          
+                           <!--  <img src="/img/brand1.png" alt="">
+                            <img src="/img/brand2.png" alt="">
+                            <img src="/img/brand3.png" alt="">
+                            <img src="/img/brand4.png" alt="">
+                            <img src="/img/brand5.png" alt="">
+                            <img src="/img/brand6.png" alt="">
+                            <img src="/img/brand1.png" alt="">
+                            <img src="/img/brand2.png" alt="">                   -->          
                         </div>
                     </div>
                 </div>
@@ -250,17 +249,17 @@ s
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
     <!-- jQuery sticky menu -->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
     
     <!-- jQuery easing -->
-    <script src="js/jquery.easing.1.3.min.js"></script>
+    <script src="/js/jquery.easing.1.3.min.js"></script>
     
     <!-- Main Script -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
     
     <!-- Slider -->
-    <script type="text/javascript" src="js/bxslider.min.js"></script>
-    <script type="text/javascript" src="js/script.slider.js"></script>
+    <script type="/text/javascript" src="js/bxslider.min.js"></script>
+    <script type="/text/javascript" src="js/script.slider.js"></script>
   </body>
 </html>

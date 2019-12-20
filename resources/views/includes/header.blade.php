@@ -30,12 +30,12 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="Index">Trang Chủ</a></li>
-                        <li><a href="Shop">Sản Phẩm</a></li>
+                        <li class="active"><a href="/Index/">Trang Chủ</a></li>
+                        <li><a href="/Shop/">Sản Phẩm</a></li>
                         <li><a href="#">Liên Hệ</a></li>
                         <li><a href="#">Giới Thiệu</a></li>
                         <li><a href="checkout.html"><i class="fa fa-user"></i> Đăng nhập</a></li>
-                        <li><a href=""> Đăng xuất</a></li>
+                        <li><a href="/login/"> Đăng xuất</a></li>
                     </ul>
                 </div>  
             </div>

@@ -25,6 +25,6 @@ Route::get('/Pay','MyController@pay');
 
 Route::get('/Cart','MyController@cart');
 
-Route::get('/login','MyController@login');
+Route::get('/login','LoginController@getlogin');
 
 Route::get('/ProductByManufacturer/{ma}','MyController@probyManu');

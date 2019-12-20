@@ -46,11 +46,11 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="/img/{{$item->Url_Img}}" alt="">
+                            <img src="/img/{{$item->url_img}}" alt="">
                         </div>
-                        <h2><a href="/Detail/{{$item->Product_id}}">{{$item->Name}}</a></h2>
+                        <h2><a href="/Detail/{{$item->id}}">{{$item->name}}</a></h2>
                         <div class="product-carousel-price">
-                            <ins>{{$item->Price}} vnd</ins> <del>{{$item->PriceReal}} vnd</del>
+                            <ins>{{$item->price}} vnd</ins> <del>{{$item->price_real}} vnd</del>
                         </div>  
                         
                         <div class="product-option-shop">
