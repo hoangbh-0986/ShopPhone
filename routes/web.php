@@ -15,16 +15,17 @@
 //     return view('Index');
 // });
 
-Route::get('/Index', 'MyController@index');
+Route::get('/index/', 'MyController@index')->name('index');
 
-Route::get('/Shop','MyController@shop');
+Route::get('/shop/','MyController@shop')->name('shop');
 
-Route::get('/Detail/{id}','MyController@detail');
+Route::get('/detail/{id}','MyController@detail')->name('detail');
 
-Route::get('/Pay','MyController@pay'); 
+Route::get('/pay/','MyController@pay')->name('pay'); 
 
-Route::get('/Cart','MyController@cart');
+Route::get('/cart/','MyController@cart')->name('cart');
 
-Route::get('/login','LoginController@getlogin');
-
-Route::get('/ProductByManufacturer/{ma}','MyController@probyManu');
+Route::get('/login','LoginController@getlogin')->name('login');
+Route::post('/login','LoginController@postLogin')->name('login');
+Route::get('/login','LoginController@logout')->name('logout');
+Route::get('/productByManufacturer/{ma}','MyController@probyManu');

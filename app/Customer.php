@@ -3,8 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
-class customer extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+class customer extends Authenticatable
 {
 	public $timestamps = false;
     public function bill()

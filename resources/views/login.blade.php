@@ -34,13 +34,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    <!--  <h1>Material Login Form</h1>-->
        <div class=" w3l-login-form">
         <h2>Đăng nhập ngay</h2>
-        <form action="#" method="POST">
-
+        <form action="{{ route('login') }}" method="POST">
+            {{ csrf_field() }}
             <div class=" w3l-form-group">
                 <label>Tài khoản:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
                     <input type="text" class="form-control" placeholder="Tài khoản" required="required" name="email" />
+                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                    @endif
                 </div>
             </div>
             <div class=" w3l-form-group">
@@ -48,6 +53,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="group">
                     <i class="fas fa-unlock"></i>
                     <input type="password" class="form-control" placeholder="Mật khẩu" required="required" name="password" />
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
                 </div>
             </div>
     <!--         <div class="forgot">

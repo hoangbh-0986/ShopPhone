@@ -11,6 +11,6 @@ $factory->define(Customer::class, function (Faker $faker) {
                'add' => $faker->streetAddress,
                'email' => $faker->email ,
                'phone_number' => $faker->phoneNumber,
-               'password' => $faker->password,
+               'password' => bcrypt('123456'),
     ];
 });

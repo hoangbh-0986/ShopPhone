@@ -16,7 +16,7 @@ class MyController extends Controller
     	 // return view ('Index',compact('products'));
         $proc = Product::all();
         $producer = Producer::all();
-        return view ('Index',compact('proc','producer'));
+        return view ('index',compact('proc','producer'));
     }
 
 
@@ -24,7 +24,7 @@ class MyController extends Controller
     {
         
          $product = Product::all();
-         return view ('Shop',compact('product'));
+         return view ('shop',compact('product'));
 
     }
 
@@ -32,17 +32,17 @@ class MyController extends Controller
     public function detail($id)
     {
     	 $news = Product::findOrFail($id);
-         return view('Detail', compact('news'));
+         return view('detail', compact('news'));
     }
 
     public function pay()
     {
-    	return view ('Pay');
+    	return view ('pay');
     }
 
     public function cart()
     {
-    	return view ('Cart');
+    	return view ('cart');
     }
 
 
@@ -52,7 +52,7 @@ class MyController extends Controller
         $pro = Producer::findOrFail($ma)->Product;
       //  $pro = Producer::where('Product_id','=',$ma)->select('*');
 
-        return view ('ProductByManufacturer',compact('pro'));
+        return view ('productByManufacturer',compact('pro'));
     } 
 
 }

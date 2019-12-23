@@ -20,7 +20,7 @@ class CreateProductTable extends Migration
             $table->string('name');
             $table->bigInteger('price');
             $table->bigInteger('price_real');
-            $table->text('url_img');
+            $table->text('url_img')->nullable();
         });
     }
 

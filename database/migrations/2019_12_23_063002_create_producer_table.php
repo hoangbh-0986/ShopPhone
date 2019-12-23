@@ -16,7 +16,7 @@ class CreateProducerTable extends Migration
         Schema::create('producers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->text('url_img');
+            $table->string('url_img')->nullable();
         });
     }
 
@@ -27,6 +27,6 @@ class CreateProducerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Producer');
+        Schema::dropIfExists('producers');
     }
 }
