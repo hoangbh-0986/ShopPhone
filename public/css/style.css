@@ -368,7 +368,7 @@ z-index: 999;}
 .section-title {
   font-family: "Raleway",sans-serif;
   font-size: 50px;
-  font-weight: 100;
+  font-weight:normal;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -558,7 +558,8 @@ padding: 35px 0 180px;}
 .footer-wid-title {
   font-family: raleway;
   font-size: 30px;
-  font-weight: 100;color: #fff
+  font-weight: normal;
+  color: #fff
 }
 
 .footer-about-us h2 {

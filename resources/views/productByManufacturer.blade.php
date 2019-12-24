@@ -61,7 +61,7 @@
                  @endforeach
       </div>
             
-            <div class="row">
+        <!--     <div class="row">
                 <div class="col-md-12">
                     <div class="product-pagination text-center">
                         <nav>
@@ -85,7 +85,7 @@
                         </nav>                        
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
    @include('includes.footer')

@@ -4,13 +4,13 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="/img/logo.png"></a></h1>
+                        <h1><a href="{{route('index')}}"><img src="/img/logo.png"></a></h1>
                     </div>
                 </div>
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.html">Giỏ Hàng <!-- <span class="cart-amunt">$100</span> --> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="{{route('cart')}}">Giỏ Hàng <!-- <span class="cart-amunt">$100</span> --> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -34,9 +34,16 @@
                         <li><a href="{{ route('shop') }}">Sản Phẩm</a></li>
                         <li><a href="#">Liên Hệ</a></li>
                         <li><a href="#">Giới Thiệu</a></li>
-                        <li><a href="checkout.html"><i class="fa fa-user"></i> Đăng nhập</a></li>
-                        <li><a href="{{ route('logout') }}"><i class="fa fa-user"></i> Đăng xuất</a></li>
-                        <li><a href="/login/"> Đăng kí</a></li>
+                      <!--   <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Đăng nhập</a></li> -->
+                        @if (Auth::check()) 
+                        
+                         <li><a href="{{route('logout')}}"><i class="fa fa-user"></i>Đăng xuất </a></li>
+                        
+                        @else 
+                          <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                        @endif
+
+                        <li><a href="{{route('registrantion')}}"> Đăng kí</a></li>
                     </ul>
                 </div>  
             </div>

@@ -67,10 +67,10 @@
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Sản phẩm cùng loại</h2>
                      
-                         @foreach($news->category->product as $proc)
+                         @foreach($news->category->product->take(4) as $proc)
                          <div class="thubmnail-recent">
                             <img src="/img/{{$proc->url_img}}" class="recent-thumb" alt="">
-                            <h2><a href="/Detail/{{$proc->id}}">{{$proc->name}}</a></h2>
+                            <h2><a href="/detail/{{$proc->id}}">{{$proc->name}}</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>{{$proc->price}}</ins> <del>{{$proc->price_real}}</del>
                             </div>                             
@@ -207,7 +207,7 @@
                                         <img src="/img/{{$product->url_img}}" alt="">
                                         <div class="product-hover">
                                             <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
-                                            <a href="/Detail/{{$product->id}}" class="view-details-link"><i class="fa fa-link"></i> chi tiết</a>
+                                            <a href="/detail/{{$product->id}}" class="view-details-link"><i class="fa fa-link"></i> chi tiết</a>
                                         </div>
                                     </div>
 

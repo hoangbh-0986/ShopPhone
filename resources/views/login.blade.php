@@ -6,7 +6,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Đăng nhập</title>
     <!-- meta tags -->
@@ -40,7 +39,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <label>Tài khoản:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Tài khoản" required="required" name="email" />
+                    <input type="text" class="form-control" placeholder="Tài khoản" name="email" />
                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
@@ -52,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <label>Mật khẩu:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Mật khẩu" required="required" name="password" />
+                    <input type="password" class="form-control" placeholder="Mật khẩu" name="password" />
                                     @if ($errors->has('password'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('password') }}</strong>
@@ -66,7 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div> -->
             <button type="submit">Đăng nhập</button>
         </form>
-        <p class=" w3l-register-p">Chưa có tài khoản?<a href="#" class="register"> Đăng kí</a></p>
+        <p class=" w3l-register-p">Chưa có tài khoản?<a href="{{route('registration')}}" class="register"> Đăng kí</a></p>
     </div>
     <!-- <footer>
         <p class="copyright-agileinfo"> &copy; 2018 Material Login Form. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>

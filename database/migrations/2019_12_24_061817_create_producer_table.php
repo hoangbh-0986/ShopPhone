@@ -27,6 +27,6 @@ class CreateProducerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('producers');
+        Schema::dropIfExists('Producer');
     }
 }

@@ -23,7 +23,7 @@ class MyController extends Controller
     public function shop()
     {
         
-         $product = Product::all();
+         $product = Product::paginate(8);
          return view ('shop',compact('product'));
 
     }
@@ -42,7 +42,9 @@ class MyController extends Controller
 
     public function cart()
     {
-    	return view ('cart');
+      // $product = Product::findOrFail($id);
+    	// return view ('cart',compact('product'));
+      return view('cart');
     }
 
 

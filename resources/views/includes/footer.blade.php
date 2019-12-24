@@ -18,7 +18,7 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Quy định và chính sách </h2>
+                        <h2 class="footer-wid-title" style="font-weight: normal;">Quy định và chính sách </h2>
                         <ul>
                             <li><a href="#">chính sách bảo hành</a></li>
                             <li><a href="#">chính sách đổi trả</a></li>
@@ -31,7 +31,7 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Loại sản phẩm-nhà sản xuất</h2>
+                        <h2 class="footer-wid-title" style="font-weight: normal;">Loại sản phẩm-nhà sản xuất</h2>
                         <ul>
                             <li><a href="#">điện thoại thông minh</a></li>
                             <li><a href="#">máy tính bảng</a></li>
@@ -44,7 +44,7 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Bản tin</h2>
+                        <h2 class="footer-wid-title" style="font-weight: normal;">Bản tin</h2>
                         <p>Đăng ký nhận bản tin của chúng tôi và nhận các ưu đãi độc quyền mà bạn sẽ không tìm thấy bất cứ nơi nào khác trực tiếp đến hộp thư đến của bạn!</p>
                         <div class="newsletter-form">
                             <form action="#">

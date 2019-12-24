@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ustora Demo</title>
+    <title>Shop Phone</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -41,7 +41,7 @@
                                 iPhone <span class="primary">6 <strong>Plus</strong></span>
                             </h2>
                             <h4 class="caption subtitle">Dual SIM</h4>
-                            <a class="caption button-radius" href="/Shop/"><span class="icon"></span>Shop now</a>
+                            <a class="caption button-radius" href="{{route('shop')}}"><span class="icon"></span>Shop now</a>
                         </div>
                     </li>
         <!--             <li><img src="/img/h4-slide2.png" alt="Slide">
@@ -114,15 +114,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">New product</h2>
+                        <h2 class="section-title" style="font-weight: normal;">Sản phẩm mới</h2>
                         <div class="product-carousel">
                             @foreach(   $proc as $item)
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="/img/{{$item->url_img}}" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
-                                        <a href="/Detail/{{$item->id}}" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
+                                        <a href="/cart/{{$item->id}}" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
+                                        <a href="/detail/{{$item->id}}" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
                                     </div>
                                 </div>
                                 
@@ -221,7 +221,7 @@
                     <div class="brand-wrapper">
                         <div class="brand-list">
                      @foreach ($producer as $producer)
-                    <a href="/ProductByManufacturer/{{$producer->id}}"> 
+                    <a href="/productByManufacturer/{{$producer->id}}"> 
                         <img src="/img/{{$producer->url_img}}" alt=""> 
                     </a>
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shop Page- Ustora Demo</title>
+    <title>Shop Phone</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -59,7 +59,7 @@
                         <div class="product-upper">
                             <img src="/img/{{$item->url_img}}" alt="">
                         </div>
-                        <h2><a href="/Detail/{{$item->id}}">{{$item->name}}</a></h2>
+                        <h2><a href="/detail/{{$item->id}}">{{$item->name}}</a></h2>
                         <div class="product-carousel-price">
                             <ins>{{$item->price}} vnd</ins> <del>{{$item->price_real}} vnd</del>
                         </div>  
@@ -252,7 +252,7 @@
                 </div> -->
             </div>
             
-            <div class="row">
+           <!--  <div class="row">
                 <div class="col-md-12">
                     <div class="product-pagination text-center">
                         <nav>
@@ -276,7 +276,9 @@
                         </nav>                        
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+        {{ $product->links() }}
         </div>
     </div>
    @include('includes.footer')
