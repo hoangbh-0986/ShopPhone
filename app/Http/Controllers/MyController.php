@@ -57,4 +57,23 @@ class MyController extends Controller
         return view ('productByManufacturer',compact('pro'));
     } 
 
+    function getSearchAjax(Request $request)
+    {
+        if($request->get('query'))
+        {
+            $query = $request->get('query');
+            $data = DB::table('products')
+            ->where('name', 'LIKE', "%{$query}%")
+            ->get();
+            $output = '<ul class="dropdown-menu" style="display:block; position:relative">';
+            foreach($data as $row)
+            {
+               $output .= '
+               <li><a href="/detail/'. $row->id .'">'.$row->name.'</a></li>
+               ';
+           }
+           $output .= '</ul>';
+           echo $output;
+       }
+    }
 }

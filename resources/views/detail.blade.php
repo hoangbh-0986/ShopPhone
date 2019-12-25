@@ -10,7 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product Page - Ustora Demo</title>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
@@ -59,8 +60,11 @@
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Tìm kiếm sản phẩm</h2>
                         <form action="">
-                            <input type="text" placeholder="Tìm sản phẩm...">
-                            <input type="submit" value="Tìm kiếm">
+                                {{ csrf_field() }}
+                            <input type="text" name="country_name" id="country_name" placeholder="Tìm sản phẩm...">
+                           <!--  <input type="text" name="country_name" id="country_name" class="form-control input-lg" placeholder="Enter Country Name" /> -->
+                              <div id="countryList"><br> </div>
+                          <!--   <input type="submit" value="Tìm kiếm"> -->
                         </form>
                     </div>
                     
@@ -301,6 +305,34 @@
 
 
   @include('includes.footer')
+
+<script>
+  $(document).ready(function(){
+
+   $('#country_name').keyup(function(){ //bắt sự kiện keyup khi người dùng gõ từ khóa tim kiếm
+    var query = $(this).val(); //lấy gía trị ng dùng gõ
+    if(query != '') //kiểm tra khác rỗng thì thực hiện đoạn lệnh bên dưới
+    {
+     var _token = $('input[name="_token"]').val(); // token để mã hóa dữ liệu
+     $.ajax({
+      url:"{{ route('search') }}", // đường dẫn khi gửi dữ liệu đi 'search' là tên route mình đặt bạn mở route lên xem là hiểu nó là cái j.
+      method:"POST", // phương thức gửi dữ liệu.
+      data:{query:query, _token:_token},
+      success:function(data){ //dữ liệu nhận về
+       $('#countryList').fadeIn();  
+       $('#countryList').html(data); //nhận dữ liệu dạng html và gán vào cặp thẻ có id là countryList
+     }
+   });
+   }
+ });
+
+   $(document).on('click', 'li', function(){  
+    $('#country_name').val($(this).text());  
+    $('#countryList').fadeOut();  
+  });  
+
+ });
+</script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     
     <!-- Bootstrap JS form CDN -->

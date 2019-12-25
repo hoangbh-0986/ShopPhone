@@ -34,3 +34,5 @@ Route::get('/productByManufacturer/{ma}','MyController@probyManu');
 
 Route::get('/registrantion','LoginController@getRegistration')->name('registration');
 Route::post('/registrantion','LoginController@postRegistration')->name('registrantion');
+
+Route::post('search/name', 'MyController@getSearchAjax')->name('search');

@@ -34,16 +34,18 @@
                         <li><a href="{{ route('shop') }}">Sản Phẩm</a></li>
                         <li><a href="#">Liên Hệ</a></li>
                         <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="{{route('registrantion')}}"> Đăng kí</a></li>
                       <!--   <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Đăng nhập</a></li> -->
                         @if (Auth::check()) 
                         
                          <li><a href="{{route('logout')}}"><i class="fa fa-user"></i>Đăng xuất </a></li>
+                         <li><a href="#">Xin chào: {{Auth::user()->name}}</a></li>
                         
                         @else 
                           <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Đăng nhập</a></li>
                         @endif
 
-                        <li><a href="{{route('registrantion')}}"> Đăng kí</a></li>
+                 
                     </ul>
                 </div>  
             </div>
